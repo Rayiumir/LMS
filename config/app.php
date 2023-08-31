@@ -156,9 +156,14 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+
+        \modules\LMS\User\Providers\UserServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
+
+
 
         /*
          * Application Service Providers...

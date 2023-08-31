@@ -26,7 +26,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "modules\\LMS\\": "modules/LMS/Users",
+            "modules\\": "modules/"
         }
     },
     "autoload-dev": {
