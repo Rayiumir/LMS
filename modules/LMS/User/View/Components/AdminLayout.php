@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace modules\LMS\User\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;

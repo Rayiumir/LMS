@@ -1,4 +1,4 @@
-<x-AppLayout>
+<x-User::AppLayout>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -42,4 +42,4 @@
         </div>
     </div>
 </div>
-</x-AppLayout>
+</x-User::AppLayout>
