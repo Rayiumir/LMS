@@ -16,7 +16,7 @@ Route::group(['namespace' => 'LMS\User', 'middleware' => 'web'], function ($rout
     // برای عضویت به سایت
 
     $router->get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-    $router->get('/post', [RegisterController::class, 'register'])->name('register');
+    $router->post('/register', [RegisterController::class, 'register'])->name('register');
 
     // برگردانی رمز عبور
 
