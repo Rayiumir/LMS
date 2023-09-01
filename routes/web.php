@@ -17,4 +17,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [\modules\LMS\Home\Http\Controllers\HomeController::class, 'index'])->name('home');
