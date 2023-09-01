@@ -21,6 +21,6 @@ class AdminLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.AdminLayout');
+        return view('Admin::components.AdminLayout');
     }
 }
