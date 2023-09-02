@@ -160,6 +160,7 @@ return [
         \modules\LMS\User\Providers\UserServiceProvider::class,
         \modules\LMS\Home\Providers\HomeServiceProvider::class,
         \modules\LMS\Admin\Provider\AdminServiceProvider::class,
+        \modules\LMS\Category\Provider\CategoryServiceProvider::class,
         /*
          * Package Service Providers...
          */
