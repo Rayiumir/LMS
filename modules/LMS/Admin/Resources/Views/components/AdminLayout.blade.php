@@ -37,6 +37,7 @@
         }
         @endif
     </script>
+    @yield('styles')
 </head>
 <body>
 <div class="d-flex" id="wrapper">
@@ -48,11 +49,11 @@
 
         @include('Admin::inc.navbar')
 
-        <div class="container">
-            <div class="p-2">
+        <main class="container">
+            <div class="mt-3">
                 {{$slot}}
             </div>
-        </div>
+        </main>
     </div>
     <!-- /#page-content-wrapper -->
 </div>
