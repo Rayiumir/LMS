@@ -4,8 +4,8 @@
     <div style="width: 250px">
         <div class="p-3">
             <div class="d-grid gap-2">
-                <button type="button" class="btn btn-light"><i class="fa-light fa-users"></i> کاربران </button>
-                <button type="button" class="btn btn-light"><i class="fa-light fa-list-tree"></i> دسته بندی </button>
+                <a href="" type="button" class="btn btn-light border-0 text-end"><i class="fa-light fa-users"></i> کاربران </a>
+                <a href="{{ route('category.index') }}" type="button" class="btn btn-light border-0 text-end"><i class="fa-light fa-list-tree"></i> دسته بندی </a>
             </div>
 
             <details class="js-list mt-2 mb-2">

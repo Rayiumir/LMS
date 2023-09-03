@@ -3,11 +3,30 @@
 namespace modules\LMS\Category\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use modules\LMS\Category\Http\Requests\CategoryRequest;
+use modules\LMS\Category\Models\Category;
 
 class CategoryController extends Controller
 {
     public function index()
     {
-        return view('Categories::index');
+        $categories = Category::all();
+        return view('Categories::index', compact('categories'));
+    }
+
+    public function store(CategoryRequest $request)
+    {
+        Category::create([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'parent_id' => $request->parent_id,
+        ]);
+
+        $notification = array(
+            'message' => 'دسته جدید با موفقیت ایجاد شد.',
+            'alert-type' => 'success'
+        );
+
+        return back()->with($notification);
     }
 }
