@@ -28,7 +28,7 @@
                                     <td>{{$row->slug}}</td>
                                     <td>{{$row->getParentAttribute()}}</td>
                                     <td class="text-center">
-                                        <i class="fa-light fa-edit ms-2 text-secondary"></i>
+                                        <a href="{{ route('category.edit', $row->id) }}"><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
                                         <i class="fa-light fa-trash text-danger"></i>
                                     </td>
                                 </tr>

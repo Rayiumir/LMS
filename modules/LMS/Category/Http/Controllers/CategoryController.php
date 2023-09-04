@@ -29,4 +29,21 @@ class CategoryController extends Controller
 
         return back()->with($notification);
     }
+
+    public function edit(Category $category)
+    {
+        $categories = Category::all();
+        return view('Categories::edit', compact('categories', 'category'));
+    }
+
+    public function update(CategoryRequest $request, Category $category)
+    {
+        $category->update([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'parent_id' => $request->parent_id,
+        ]);
+
+        return to_route('category.index');
+    }
 }
