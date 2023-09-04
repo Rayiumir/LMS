@@ -3,6 +3,7 @@
 namespace modules\LMS\Category\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 use modules\LMS\Category\Http\Requests\CategoryRequest;
 use modules\LMS\Category\Models\Category;
 
@@ -44,6 +45,23 @@ class CategoryController extends Controller
             'parent_id' => $request->parent_id,
         ]);
 
-        return to_route('category.index');
+        $notification = array(
+            'message' => 'دسته جدید با موفقیت به روز رسانی شد.',
+            'alert-type' => 'success'
+        );
+
+        return to_route('category.index')->with($notification);
+    }
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+
+        $notification = array(
+            'message' => 'دسته با موفقیت حذف شد.',
+            'alert-type' => 'success'
+        );
+
+        return back()->with($notification);
     }
 }

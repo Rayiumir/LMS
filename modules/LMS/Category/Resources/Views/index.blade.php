@@ -29,7 +29,11 @@
                                     <td>{{$row->getParentAttribute()}}</td>
                                     <td class="text-center">
                                         <a href="{{ route('category.edit', $row->id) }}"><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
-                                        <i class="fa-light fa-trash text-danger"></i>
+                                        <a href="{{ route('category.destroy', $row->id) }}" onclick="destroyCategory(event, {{ $row->id }})"><i class="fa-light fa-trash text-danger"></i></a>
+                                        <form action="{{ route('category.destroy', $row->id) }}" method="POST" id="destroy-category-{{ $row->id }}">
+                                            @csrf
+                                            @method('delete')
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
@@ -42,4 +46,12 @@
             @include('Categories::create')
         </div>
     </div>
+        <x-slot name="scripts">
+            <script>
+                function destroyCategory(event, id) {
+                    event.preventDefault();
+                    document.getElementById('destroy-category-' + id).submit();
+                }
+            </script>
+        </x-slot>
 </x-Admin::AdminLayout>

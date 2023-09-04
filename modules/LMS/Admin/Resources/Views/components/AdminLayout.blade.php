@@ -66,6 +66,6 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
-
+{{ $scripts ?? '' }}
 </body>
 </html>
