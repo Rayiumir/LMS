@@ -3,25 +3,26 @@
 namespace modules\LMS\Category\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
 use modules\LMS\Category\Http\Requests\CategoryRequest;
-use modules\LMS\Category\Models\Category;
+use modules\LMS\Category\Repositories\CategoryRepo;
 
 class CategoryController extends Controller
 {
+    public CategoryRepo $repo;
+
+    public function __construct(CategoryRepo $categoryRepo)
+    {
+        $this->repo = $categoryRepo;
+    }
     public function index()
     {
-        $categories = Category::all();
+        $categories = $this->repo->all();
         return view('Categories::index', compact('categories'));
     }
 
     public function store(CategoryRequest $request)
     {
-        Category::create([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'parent_id' => $request->parent_id,
-        ]);
+        $this->repo->store($request);
 
         $notification = array(
             'message' => 'دسته جدید با موفقیت ایجاد شد.',
@@ -31,19 +32,16 @@ class CategoryController extends Controller
         return back()->with($notification);
     }
 
-    public function edit(Category $category)
+    public function edit($categoryId)
     {
-        $categories = Category::where('id', '!=', $category->id)->get();
+        $category = $this->repo->findById($categoryId);
+        $categories = $this->repo->allExceptById($categoryId);
         return view('Categories::edit', compact('categories', 'category'));
     }
 
-    public function update(CategoryRequest $request, Category $category)
+    public function update($categoryId, CategoryRequest $request)
     {
-        $category->update([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'parent_id' => $request->parent_id,
-        ]);
+        $this->repo->update($categoryId, $request);
 
         $notification = array(
             'message' => 'دسته جدید با موفقیت به روز رسانی شد.',
@@ -53,9 +51,9 @@ class CategoryController extends Controller
         return to_route('category.index')->with($notification);
     }
 
-    public function destroy(Category $category)
+    public function destroy($categoryId)
     {
-        $category->delete();
+        $this->repo->delete($categoryId);
 
         $notification = array(
             'message' => 'دسته با موفقیت حذف شد.',
