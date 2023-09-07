@@ -6,6 +6,9 @@
             }
         </style>
     @endsection
+    <x-slot name="breadcrumb">
+        <li class="me-2"><a href="#" class="text-decoration-none">ویرایش دسته بندی</a></li>
+    </x-slot>
     <div class="row">
         <div class="col-md-5 mx-auto">
             <div class="card">

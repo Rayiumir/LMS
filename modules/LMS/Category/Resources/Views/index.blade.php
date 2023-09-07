@@ -6,6 +6,9 @@
             }
         </style>
     @endsection
+    <x-slot name="breadcrumb">
+       <li class="me-2"><a href="{{ route('category.index') }}" class="text-decoration-none">دسته بندی</a></li>
+    </x-slot>
     <div class="row">
         <div class="col-md-8">
             <div class="card">
