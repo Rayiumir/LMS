@@ -18,7 +18,7 @@ class CategoryServiceProvider extends ServiceProvider
         config()->set('sidebar.items.categories', [
             "icon" => "fa-list-tree",
             "title" => "دسته بندی",
-            "url" => to_route('category.index')
+            "url" => route('category.index')
         ]);
     }
 }
