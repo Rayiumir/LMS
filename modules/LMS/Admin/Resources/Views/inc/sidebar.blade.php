@@ -4,7 +4,6 @@
     <div style="width: 250px">
         <div class="p-3">
             <div class="d-grid gap-2">
-                <a href="" type="button" class="btn btn-light border-0 text-end"><i class="fa-light fa-users"></i> کاربران </a>
                 @foreach(config('sidebar.items') as $sidebarItem)
                     <a href="{{$sidebarItem['url']}}" type="button" class="btn btn-light border-0 text-end"><i class="fa-light {{$sidebarItem['icon']}}"></i> {{$sidebarItem['title']}} </a>
                 @endforeach

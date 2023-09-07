@@ -2,6 +2,7 @@
 
 return [
     'items' =>[
+        'admin' => [],
         'categories' => [],
     ]
 ];

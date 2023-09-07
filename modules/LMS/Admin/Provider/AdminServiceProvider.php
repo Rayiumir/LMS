@@ -13,5 +13,14 @@ class AdminServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../Config/sidebar.php', 'sidebar');
     }
 
-    public function boot(){}
+    public function boot()
+    {
+        $this->app->booted(function (){
+            config()->set('sidebar.items.admin', [
+                "icon" => "fa-home",
+                "title" => "پیشخوان",
+                "url" => route('admin.index')
+            ]);
+        });
+    }
 }
