@@ -4,5 +4,6 @@ return [
     'items' =>[
         'admin' => [],
         'categories' => [],
+        'permissions' => [],
     ]
 ];

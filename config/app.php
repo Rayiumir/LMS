@@ -161,6 +161,7 @@ return [
         \modules\LMS\Home\Providers\HomeServiceProvider::class,
         \modules\LMS\Admin\Provider\AdminServiceProvider::class,
         \modules\LMS\Category\Provider\CategoryServiceProvider::class,
+        \modules\LMS\Permissions\Providers\PermissionServiceProvider::class,
         /*
          * Package Service Providers...
          */
