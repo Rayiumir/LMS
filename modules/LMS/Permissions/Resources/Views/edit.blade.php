@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-body">
                     <span class="fw-bold fs-5 mb-3">به روز رسانی دسته </span>
-                    <form action="" method="POST">
+                    <form action="{{ route('category.update', $category->id) }}" method="POST">
                         @csrf
                         @method('PATCH')
                         <div class="mb-3">
