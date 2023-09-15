@@ -11,6 +11,7 @@ class PermissionServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->loadRoutesFrom(__DIR__ . '/../Routes/permissions_route.php');
         $this->loadViewsFrom(__DIR__ . '/../Resources/Views', namespace: 'Permission');
+        $this->loadJsonTranslationsFrom(__DIR__ . "/../Resources/Lang/fa.json");
     }
 
     public function boot(): void

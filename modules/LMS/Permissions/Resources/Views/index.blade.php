@@ -4,6 +4,14 @@
             .form-select {
                 background-position: left .5rem center !important;
             }
+            .form-check .form-check-input {
+                float: right;
+                margin-right: 0;
+                margin-top: 8px;
+            }
+            .form-check-label {
+                margin-right: 30px;
+            }
         </style>
     @endsection
     <div class="row">
