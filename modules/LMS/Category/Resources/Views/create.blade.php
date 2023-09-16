@@ -17,7 +17,7 @@
             @foreach($permissions as $row)
                 <div class="form-check">
                     <input class="form-check-input" name="permissions[{{$row->name}}]" type="checkbox"
-                           value="true"
+                           value="{{$row->name}}"
                            id="flexCheckDefault"
                     @if(is_array(old('permissions')) && array_key_exists($row->name, old('permissions'))) checked @endif>
                     <label class="form-check-label" for="flexCheckDefault">

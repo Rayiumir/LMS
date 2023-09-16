@@ -32,8 +32,14 @@
                                 @foreach($roles as $row)
                                     <tr>
                                         <th scope="row">{{$row->id}}</th>
-                                        <td>{{$row->title}}</td>
-                                        <td>--</td>
+                                        <td>{{$row->name}}</td>
+                                        <td>
+                                            <ul>
+                                                @foreach($row->permissions as $row)
+                                                    <li>@lang($row->name)</li>
+                                                @endforeach
+                                            </ul>
+                                        </td>
                                         <td class="text-center">
                                             <a href=""><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
                                             <a href="" onclick="destroyCategory(event, {{$row->id}})"><i class="fa-light fa-trash text-danger"></i></a>
