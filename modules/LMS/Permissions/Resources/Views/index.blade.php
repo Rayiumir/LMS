@@ -43,8 +43,8 @@
                                         </td>
                                         <td class="text-center">
                                             <a href="{{ route('permissions.edit', $row->id) }}"><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
-                                            <a href="" onclick="destroyCategory(event, {{$row->id}})"><i class="fa-light fa-trash text-danger"></i></a>
-                                            <form action="" method="POST" id="destroy-category-{{$row->id}}">
+                                            <a href="{{ route('permissions.destroy', $row->id) }}" onclick="destroyPermission(event, '{{ route('permissions.destroy', $row->id) }}')"><i class="fa-light fa-trash text-danger"></i></a>
+                                            <form action="{{ route('permissions.destroy', $row->id) }}" method="POST" id="destroy-permission-{{ $row->id }}">
                                                 @csrf
                                                 @method('delete')
                                             </form>
@@ -61,12 +61,12 @@
             @include('Categories::create')
         </div>
     </div>
-        <x-slot name="scripts">
-            <script>
-                function destroyCategory(event, id) {
-                    event.preventDefault();
-                    document.getElementById('destroy-category-' + id).submit();
-                }
-            </script>
-        </x-slot>
+    <x-slot name="scripts">
+        <script>
+            function destroyPermission(event, id) {
+                event.preventDefault();
+                document.getElementById('destroy-permission-' + id).submit();
+            }
+        </script>
+    </x-slot>
 </x-Admin::AdminLayout>

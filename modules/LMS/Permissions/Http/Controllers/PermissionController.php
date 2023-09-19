@@ -45,4 +45,10 @@ class PermissionController extends Controller
         $this->roleRepo->update($id, $request);
         return to_route('permissions.index');
     }
+
+    public function destroy($roleId)
+    {
+        $this->roleRepo->delete($roleId);
+        return back();
+    }
 }
