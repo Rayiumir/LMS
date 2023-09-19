@@ -14,6 +14,7 @@
             }
         </style>
     @endsection
+
     <div class="row">
         <div class="col-md-8">
             <div class="card">
@@ -41,7 +42,7 @@
                                             </ul>
                                         </td>
                                         <td class="text-center">
-                                            <a href=""><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
+                                            <a href="{{ route('permissions.edit', $row->id) }}"><i class="fa-light fa-edit ms-2 text-secondary"></i></a>
                                             <a href="" onclick="destroyCategory(event, {{$row->id}})"><i class="fa-light fa-trash text-danger"></i></a>
                                             <form action="" method="POST" id="destroy-category-{{$row->id}}">
                                                 @csrf

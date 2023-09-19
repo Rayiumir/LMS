@@ -50,7 +50,6 @@
         @include('Admin::inc.navbar')
 
         <main class="container">
-            @include('Admin::breadcrumb')
             <div class="mt-3">
                 {{$slot}}
             </div>
