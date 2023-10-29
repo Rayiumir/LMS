@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            @include('Categories::create')
+            @include('Permission::create')
         </div>
     </div>
     <x-slot name="scripts">
