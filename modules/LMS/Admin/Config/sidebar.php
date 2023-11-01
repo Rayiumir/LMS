@@ -5,5 +5,6 @@ return [
         'admin' => [],
         'categories' => [],
         'permissions' => [],
+        'courses' => [],
     ]
 ];

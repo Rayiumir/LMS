@@ -162,6 +162,7 @@ return [
         \modules\LMS\Admin\Provider\AdminServiceProvider::class,
         \modules\LMS\Category\Provider\CategoryServiceProvider::class,
         \modules\LMS\Permissions\Providers\PermissionServiceProvider::class,
+        \modules\LMS\Course\Providers\CourseServiceProvider::class,
         /*
          * Package Service Providers...
          */
