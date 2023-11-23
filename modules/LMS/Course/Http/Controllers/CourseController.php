@@ -10,4 +10,9 @@ class CourseController extends Controller
     {
         return view('Courses::index');
     }
+
+    public function create()
+    {
+        return view('Courses::create');
+    }
 }
