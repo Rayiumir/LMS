@@ -14,6 +14,6 @@ class CourseController extends Controller
     public function create(UserRepo $userRepo)
     {
         $teachers = $userRepo->getTeachers();
-        return view('Courses::create');
+        return view('Courses::create', compact('teachers'));
     }
 }
