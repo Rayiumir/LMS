@@ -59,9 +59,9 @@
                         <label for="select1" class="form-label">انتخاب مدرس دوره</label>
                         <select class="form-select @error('teacher_id') is-invalid @enderror" name="teacher_id" id="select1" aria-label="Default select example" required>
                             <option selected>انتخاب کنید ... </option>
-                            <option value="0">One</option>
-                            <option value="1">Two</option>
-                            <option value="3">Three</option>
+                            @foreach($teachers as $row)
+                                <option value="{{$row->id}}">{{$row->name}}</option>
+                            @endforeach
                         </select>
                         @error('teacher_id')
                         <span class="invalid-feedback" role="alert">
@@ -74,9 +74,8 @@
                         <label for="select2" class="form-label">نوع دوره</label>
                         <select class="form-select @error('type') is-invalid @enderror" name="type" id="select2" aria-label="Default select example" required>
                             <option selected>انتخاب کنید ... </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="cash">نقدی</option>
+                            <option value="free">رایگان</option>
                         </select>
                         @error('type')
                         <span class="invalid-feedback" role="alert">
@@ -89,9 +88,9 @@
                         <label for="select3" class="form-label">وضعیت دوره</label>
                         <select class="form-select @error('status') is-invalid @enderror" name="status" id="select3" aria-label="Default select example" required>
                             <option selected>انتخاب کنید ... </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="completed">تکمیل شده</option>
+                            <option value="not-completed">در حال برگزاری</option>
+                            <option value="lock">قفل شده</option>
                         </select>
                         @error('status')
                         <span class="invalid-feedback" role="alert">
@@ -104,21 +103,11 @@
                         <label for="select4" class="form-label">دسته بندی</label>
                         <select class="form-select @error('category_id') is-invalid @enderror" name="category_id" id="select4" aria-label="Default select example" required>
                             <option selected>انتخاب کنید ... </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            @foreach($categories as $row)
+                                <option value="{{$row->id}}">{{$row->name}}</option>
+                            @endforeach
                         </select>
                         @error('category_id')
-                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-
-                    <div class="col-md-9">
-                        <label for="input6" class="form-label">برچسب ها</label>
-                        <input type="text @error('tags') is-invalid @enderror" name="tags" class="form-control" id="input6" required>
-                        @error('tags')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
