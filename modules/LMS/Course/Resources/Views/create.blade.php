@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <label for="select2" class="form-label">نوع دوره</label>
+                        <label for="select2" class="form-label">دسترسی دوره</label>
                         <select class="form-select @error('type') is-invalid @enderror" name="type" id="select2" aria-label="Default select example" required>
                             <option selected>انتخاب کنید ... </option>
                             <option value="cash">نقدی</option>
