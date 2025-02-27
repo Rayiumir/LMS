@@ -3,7 +3,7 @@
  *
  * Simple and Lightweight Multi Item Carousel Bootstrap
  *
- * @copyright Copyright 2024 Rayiumir Limited.
+ * @copyright Copyright 2024 rayiumir Limited.
  * @author    Raymond Baghumian.
  * @link      https://github.com/Rayiumir/Silderable
  * @forked    https://bootsnipp.com/snippets/9kBZp

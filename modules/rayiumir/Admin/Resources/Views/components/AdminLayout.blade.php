@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>میزکار شرکتی {{ $title ?? '' }} </title>
+    <title>میزکار آموزشی {{ $title ?? '' }} </title>
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.rtl.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/all.css')}}">
@@ -13,12 +13,12 @@
 <body>
 <div class="d-flex" id="wrapper">
 
-    @include('admin.inc.sidebar')
+    @include('Admin::admin.inc.sidebar')
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        @include('admin.inc.navbar')
+        @include('Admin::admin.inc.navbar')
 
         <div class="container">
             <div class="card-body mt-5">

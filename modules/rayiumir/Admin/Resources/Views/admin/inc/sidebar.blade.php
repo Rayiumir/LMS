@@ -11,12 +11,12 @@
         </figure>
         <div class="mt-3">
             <a href="" class="btn btn-secondary btn-sm rounded-3" title="ویرایش پروفایل"><i class="fa-duotone fa-gear"></i></a>
-            <a href="{{ route('admin.logout') }}" class="btn btn-danger btn-sm rounded-3" title="خروج"><i class="fa-duotone fa-sign-out"></i></a>
+            <a href="{{ route('logout') }}" class="btn btn-danger btn-sm rounded-3" title="خروج"><i class="fa-duotone fa-sign-out"></i></a>
         </div>
     </div>
     <div class="mt-3 p-3">
         <div class="d-grid gep-3">
-            <a href="{{ route('admin.index') }}" class="btn {{ request()->routeIs('admin.index') ? 'btn-light text-start border-0 active' : 'btn-light text-start border-0' }} rounded-3 mb-2"><i class="fa-duotone fa-home me-2"></i> پیشخوان </a>
+            <a href="{{ route('index') }}" class="btn {{ request()->routeIs('index') ? 'btn-light text-start border-0 active' : 'btn-light text-start border-0' }} rounded-3 mb-2"><i class="fa-duotone fa-home me-2"></i> پیشخوان </a>
         </div>
     </div>
 </div>
