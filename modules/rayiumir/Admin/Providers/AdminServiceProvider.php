@@ -18,7 +18,8 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->app->booted(static function(){
             config()->set('AdminConfig.menus.admin', [
-                'url' => route('index'),
+                'route' => 'admin',
+                'url' => route('admin.index'),
                 'title' => 'میزکار اصلی',
                 'icon' => 'fa-home'
             ]);

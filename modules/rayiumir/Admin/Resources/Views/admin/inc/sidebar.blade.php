@@ -16,7 +16,26 @@
     </div>
     <div class="mt-3 p-3">
         <div class="d-grid gep-3">
-            <a href="{{ route('index') }}" class="btn {{ request()->routeIs('index') ? 'btn-light text-start border-0 active' : 'btn-light text-start border-0' }} rounded-3 mb-2"><i class="fa-duotone fa-home me-2"></i> پیشخوان </a>
+            @foreach(config('AdminConfig.menus', []) as $row)
+                @php
+                    // Check if the 'route' key exists
+                    $baseRouteName = $row['route'] ?? null;
+
+                    // If the 'route' key exists, check if the current route matches any of the expected routes
+                    $isActive = $baseRouteName ? request()->routeIs([
+                        "{$baseRouteName}.index",
+                        "{$baseRouteName}.create",
+                        "{$baseRouteName}.edit"
+                    ]) : false;
+
+                @endphp
+
+                <a href="{{ $row['url'] ?? '#' }}"
+                   type="button"
+                   class="btn {{ $isActive ? 'btn-light text-start border-0 active' : 'btn-light text-start border-0' }} rounded-3 mb-2">
+                    <i class="fa-duotone {{ $row['icon'] ?? '' }}"></i> {{ $row['title'] ?? '' }}
+                </a>
+            @endforeach
         </div>
     </div>
 </div>
