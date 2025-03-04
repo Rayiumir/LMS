@@ -19,7 +19,7 @@ class CategoryServiceProvider extends ServiceProvider
         $this->app->booted(static function(){
             config()->set('AdminConfig.menus.category', [
                 'route' => 'categories',
-                'url' => route('categories.index'), // Store the URL for the link
+                'url' => route('categories.index'),
                 'title' => 'دسته بندی',
                 'icon' => 'fa-list-tree'
             ]);
