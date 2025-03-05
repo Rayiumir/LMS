@@ -32,6 +32,8 @@ class CategoryRepo
         ]);
     }
 
+
+
     public function update($id, $data): void
     {
         Category::where('id', $id)->update([

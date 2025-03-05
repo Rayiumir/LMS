@@ -25,7 +25,7 @@
                                     <td>{{ $row->slug }}</td>
                                     <td>{{ $row->getParentName() }}</td>
                                     <td class="text-center">
-                                        <i class="fa-duotone fa-edit text-secondary"></i>
+                                        <a href="{{ route('categories.edit', $row->id) }}"><i class="fa-duotone fa-edit text-secondary"></i></a>
                                         <a onclick="event.preventDefault();document.getElementById('trash-{{$row->id}}').submit()"><i class="fa-duotone fa-trash text-danger"></i></a>
                                         <form id="trash-{{$row->id}}" action="{{ route('categories.destroy', $row->id) }}" method="POST">@csrf @method('DELETE')</form>
                                     </td>

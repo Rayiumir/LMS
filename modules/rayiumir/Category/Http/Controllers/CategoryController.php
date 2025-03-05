@@ -20,6 +20,15 @@ class CategoryController extends Controller
         return view('Category::index', compact('categories'));
     }
 
+    public function create(){}
+
+    public function edit($categoryId)
+    {
+        $category = $this->repo->findById($categoryId);
+        $categories = $this->repo->allExceptById($categoryId);
+        return view('Category::edit', compact('category', 'categories'));
+    }
+
     public function store(CategoryRequest $request)
     {
         $this->repo->store($request);
@@ -29,7 +38,7 @@ class CategoryController extends Controller
     public function update($categoryId, CategoryRequest $request)
     {
         $this->repo->update($categoryId, $request);
-        return back();
+        return to_route('categories.index');
     }
 
     public function destroy($categoryId)
