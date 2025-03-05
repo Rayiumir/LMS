@@ -18,16 +18,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td class="text-center">
-                                    <i class="fa-duotone fa-edit text-secondary"></i>
-                                    <i class="fa-duotone fa-trash text-danger"></i>
-                                </td>
-                            </tr>
+                            @foreach($categories as $row)
+                                <tr>
+                                    <th scope="row">{{ $row->id }}</th>
+                                    <td>{{ $row->name }}</td>
+                                    <td>{{ $row->slug }}</td>
+                                    <td>{{ $row->getParentName() }}</td>
+                                    <td class="text-center">
+                                        <i class="fa-duotone fa-edit text-secondary"></i>
+                                        <a onclick="event.preventDefault();document.getElementById('trash-{{$row->id}}').submit()"><i class="fa-duotone fa-trash text-danger"></i></a>
+                                        <form id="trash-{{$row->id}}" action="{{ route('categories.destroy', $row->id) }}" method="POST">@csrf @method('DELETE')</form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -36,7 +39,8 @@
         <div class="col-md-4">
             <div class="card rounded-4">
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('categories.store') }}" method="post">
+                        @csrf
                         <div class="mb-3">
                             <label for="Input1" class="form-label">عنوان دسته بندی</label>
                             <input type="text" class="form-control rounded-5 @error('name') is-invalid @enderror" name="name" id="Input1">
@@ -50,10 +54,11 @@
                         <div class="mb-3">
                             <label for="Select1" class="form-label">دسته والد</label>
                             <select class="form-select rounded-5 @error('parent_id') is-invalid @enderror" name="parent_id" id="Select1">
-                                <option selected>انتخاب کنید ... </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected>انتخاب کنید ...</option>
+                                <option value="">ندارد</option>
+                                @foreach($categories as $row)
+                                    <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                @endforeach
                             </select>
                             @error('parent_id') <div class="text-danger">{{ $message }}</div> @enderror
                         </div>
