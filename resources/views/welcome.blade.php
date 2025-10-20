@@ -6,10 +6,6 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -37,44 +33,44 @@
             <div id="hs-navbar-example" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
             <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-strat sm:mt-0 sm:ps-5">
                 <a class="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">خانه</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Account</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Work</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Blog</a>
+                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">حساب</a>
+                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">کار</a>
+                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">وبلاگ</a>
                 <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--adaptive:adaptive] ">
                 <button id="hs-navbar-example-dropdown" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 font-medium dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
-                    Dropdown
+                    دیگر ...
                     <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
 
                 <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-1 space-y-1 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute top-full sm:border border-gray-200 before:-top-5 before:start-0 before:w-full before:h-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown">
                     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    About
+                    درباره
                     </a>
                     <div class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] relative">
                     <button id="hs-navbar-example-dropdown-sub" type="button" class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
-                        Sub Menu
+                        زیر مجموعه
                         <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:-rotate-90 sm:-rotate-90 duration-300 ms-2 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                     </button>
 
                     <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute sm:border border-gray-200 before:-end-5 before:top-0 before:h-full before:w-5 sm:mx-2.5! top-0 end-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown-sub">
                         <div class="p-1 space-y-1">
                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            About
+                            درباره
                         </a>
                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Downloads
+                            دانلود ها
                         </a>
                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Team Account
+                            حساب تیم ها
                         </a>
                         </div>
                     </div>
                     </div>
                     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    Downloads
+                    دانلود ها
                     </a>
                     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    Team Account
+                    حساب تیم ها
                     </a>
                 </div>
                 </div>
@@ -83,7 +79,189 @@
         </nav>
         </header>
         <div class="container mx-auto px-4">
-            تست
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5">
+                <div class="md:col-span-2">
+                    <!-- Slider -->
+                    <div data-hs-carousel='{"loadingClasses": "opacity-0", "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500"}' class="relative mt-1">
+                        <div class="hs-carousel relative overflow-hidden w-full min-h-96 bg-white rounded-lg">
+                            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                                <div class="hs-carousel-slide">
+                                    <img src="{{ asset('img/p-2.jpg') }}" alt="" srcset="">
+                                </div>
+                                <div class="hs-carousel-slide">
+                                    <img src="{{ asset('img/p-4.jpg') }}" alt="" srcset="">
+                                </div>
+                                <div class="hs-carousel-slide">
+                                    <img src="{{ asset('img/p-3.jpg') }}" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 start-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden">
+                            <span class="text-2xl" aria-hidden="true">
+                              <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m15 18-6-6 6-6"></path>
+                              </svg>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 end-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden">
+                            <span class="sr-only">Next</span>
+                            <span class="text-2xl" aria-hidden="true">
+                              <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6"></path>
+                              </svg>
+                            </span>
+                        </button>
+
+                        <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"></div>
+                    </div>
+                    <!-- End Slider -->
+                </div>
+                <div class="md:row-span-3">
+                    <div class="mb-2">
+                        <img src="{{ asset('img/p-2.jpg') }}" class="rounded-md" alt="" srcset="">
+                    </div>
+                    <div>
+                        <img src="{{ asset('img/p-5.jpg') }}" class="rounded-md" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            {{-- Categories--}}
+            <section class="mt-5">
+                <h2 class="text-2xl font-bold">چی میخوای یاد بگیری؟</h2>
+                <span>دسته‌بندی‌های آموزشی رو ببین و از جایی شروع کن که برات جذابه.</span>
+                <div class="grid grid-cols-8 gap-3 mt-8">
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                    <div class="flex flex-col items-center bg-white border border-gray-200 shadow-2xs rounded-xl p-4 md:p-5">
+                        <div class="w-30">
+                            <img src="{{ asset('img/Laravel-Logo.png') }}" alt="" srcset="">
+                        </div>
+                        <span class="font-bold">
+                            یادگیری لاراول
+                        </span>
+                    </div>
+                </div>
+            </section>
         </div>
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
