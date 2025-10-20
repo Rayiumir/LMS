@@ -1,3 +1,6 @@
+/* Font Vazir */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -24,3 +27,7 @@
 
 /* Defaults hover styles on all devices */
 @custom-variant hover (&:hover);
+
+body{
+    font-family: Vazirmatn;
+}
