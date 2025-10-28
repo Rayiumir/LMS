@@ -16,65 +16,69 @@
         @endif
     </head>
     <body>
-        <header class="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-800">
+        <header class="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
             <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
-            <div class="flex items-center justify-between">
-            <a class="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">
-                Brand
-            </a>
-            <div class="sm:hidden">
-                <button type="button" class="hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
-                <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
-                <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                <span class="sr-only">Toggle navigation</span>
-                </button>
-            </div>
+            <div class="flex items-center justify-between sm:order-3">
+                <a class="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">
+                    Brand
+                </a>
+                <div class="sm:order-3 flex items-center gap-x-2">
+                    <button type="button" class="sm:hidden hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent" id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
+                        <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+                        <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <button type="button" class="py-2 px-6 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                        عضویت در سایت
+                    </button>
+                </div>
             </div>
             <div id="hs-navbar-example" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
-            <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-strat sm:mt-0 sm:ps-5">
-                <a class="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">خانه</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">حساب</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">کار</a>
-                <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">وبلاگ</a>
-                <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--adaptive:adaptive] ">
-                <button id="hs-navbar-example-dropdown" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 font-medium dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
-                    دیگر ...
-                    <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                </button>
-
-                <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-1 space-y-1 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute top-full sm:border border-gray-200 before:-top-5 before:start-0 before:w-full before:h-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown">
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    درباره
-                    </a>
-                    <div class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] relative">
-                    <button id="hs-navbar-example-dropdown-sub" type="button" class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
-                        زیر مجموعه
-                        <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:-rotate-90 sm:-rotate-90 duration-300 ms-2 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-strat sm:mt-0 sm:ps-5">
+                    <a class="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">خانه</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">حساب</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">کار</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400" href="#">وبلاگ</a>
+                    <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--adaptive:adaptive] ">
+                    <button id="hs-navbar-example-dropdown" type="button" class="hs-dropdown-toggle flex items-center w-full text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 font-medium dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
+                        دیگر ...
+                        <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                     </button>
 
-                    <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute sm:border border-gray-200 before:-end-5 before:top-0 before:h-full before:w-5 sm:mx-2.5! top-0 end-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown-sub">
-                        <div class="p-1 space-y-1">
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            درباره
+                    <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-1 space-y-1 before:absolute top-full sm:border border-gray-200 before:-top-5 before:start-0 before:w-full before:h-5 hidden" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown">
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                        درباره
                         </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            دانلود ها
-                        </a>
-                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            حساب تیم ها
-                        </a>
+                        <div class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] relative">
+                        <button id="hs-navbar-example-dropdown-sub" type="button" class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100">
+                            زیر مجموعه
+                            <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:-rotate-90 sm:-rotate-90 duration-300 ms-2 shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+
+                        <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg before:absolute sm:border border-gray-200 before:-end-5 before:top-0 before:h-full before:w-5 sm:mx-2.5! top-0 end-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown-sub">
+                            <div class="p-1 space-y-1">
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                                درباره
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                                دانلود ها
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                                حساب تیم ها
+                            </a>
+                            </div>
                         </div>
+                        </div>
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                        دانلود ها
+                        </a>
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100" href="#">
+                        حساب تیم ها
+                        </a>
                     </div>
                     </div>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    دانلود ها
-                    </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                    حساب تیم ها
-                    </a>
+
                 </div>
-                </div>
-            </div>
             </div>
         </nav>
         </header>
@@ -99,9 +103,9 @@
 
                         <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 start-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden z-10">
                             <span class="text-2xl" aria-hidden="true">
-                                  <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m15 18-6-6 6-6"></path>
-                                  </svg>
+                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
                             </span>
                             <span class="sr-only">Previous</span>
                         </button>
@@ -109,8 +113,8 @@
                             <span class="sr-only">Next</span>
                             <span class="text-2xl" aria-hidden="true">
                                 <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m9 18 6-6-6-6"></path>
-                                </svg>
+                                    <path d="m15 18-6-6 6-6"></path>
+                                  </svg>
                             </span>
                         </button>
                         <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 gap-x-2 z-10"></div>
@@ -266,9 +270,9 @@
             <section class="mt-5">
                 <h2 class="text-2xl font-bold">دوره های جدید</h2>
 
-                <div data-hs-carousel='{"loadingClasses": "opacity-0","dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500","slidesQty": {"xs": 1,"lg": 5},"isRTL": true}' class="relative">
-                    <div class="hs-carousel w-full overflow-hidden bg-white rounded-lg mt-5 mb-5">
-                        <div class="relative min-h-96 -mx-1">
+                <div data-hs-carousel='{"loadingClasses": "opacity-0","slidesQty": {"xs": 1,"lg": 5},"isRTL": true}' class="relative">
+                    <div class="hs-carousel w-full overflow-hidden rounded-lg mt-5 mb-5">
+                        <div class="relative min-h-85 -mx-1">
                             <!-- transition-transform duration-700 -->
                             <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 transition-transform duration-700">
                                 <div class="hs-carousel-slide px-1">
@@ -411,28 +415,378 @@
                         </div>
                     </div>
 
-                    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
-                        <span class="text-2xl" aria-hidden="true">
-                          <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m15 18-6-6 6-6"></path>
-                          </svg>
-                        </span>
+                    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 start-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden z-10">
+                            <span class="text-2xl" aria-hidden="true">
+                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </span>
                         <span class="sr-only">Previous</span>
                     </button>
-                    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
+                    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 end-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden z-10">
                         <span class="sr-only">Next</span>
                         <span class="text-2xl" aria-hidden="true">
-                            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m9 18 6-6-6-6"></path>
-                            </svg>
-                        </span>
+                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m15 18-6-6 6-6"></path>
+                                  </svg>
+                            </span>
                     </button>
 
                     <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"></div>
                 </div>
             </section>
-            
+
+            {{-- دوره های پرفروش --}}
+            <section class="mt-5">
+                <h2 class="text-2xl font-bold">دوره های پر فروش</h2>
+
+                <div data-hs-carousel='{"loadingClasses": "opacity-0","slidesQty": {"xs": 1,"lg": 5},"isRTL": true}' class="relative">
+                    <div class="hs-carousel w-full overflow-hidden rounded-lg mt-5 mb-5">
+                        <div class="relative min-h-85 -mx-1">
+                            <!-- transition-transform duration-700 -->
+                            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap opacity-0 transition-transform duration-700">
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hs-carousel-slide px-1">
+                                    <div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl">
+                                        <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                                        <div class="p-4 md:p-5">
+                                            <h3 class="text-lg font-bold">
+                                                دوره لاراول ۱۲
+                                            </h3>
+                                            <div class="flex items-center justify-between mt-5 mb-2">
+                                                <span class="text-gray-600">00:00:00</span>
+                                                <span class="text-gray-600">۵۰ دانشجو</span>
+                                            </div>
+                                            <a class="w-full mt-2 py-2 px-3 inline-flex justify-center items-center text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                مشاهده دوره
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 start-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden z-10">
+                            <span class="text-2xl" aria-hidden="true">
+                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+                    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:cursor-default absolute top-1/2 end-2 inline-flex justify-center items-center size-10 bg-white border border-gray-100 text-gray-800 rounded-full shadow-2xs hover:bg-gray-100 -translate-y-1/2 focus:outline-hidden z-10">
+                        <span class="sr-only">Next</span>
+                        <span class="text-2xl" aria-hidden="true">
+                                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m15 18-6-6 6-6"></path>
+                                  </svg>
+                            </span>
+                    </button>
+
+                    <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"></div>
+                </div>
+            </section>
+
+            {{--Blog--}}
+            <section class="mt-5 mb-5">
+                <h2 class="text-2xl font-bold">وبلاگ</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5">
+
+                    <a href="#"
+                       class="block border border-gray-300 rounded-2xl hover:shadow-md focus:outline-hidden transition-shadow">
+                        <div class="flex flex-col sm:flex-row items-stretch overflow-hidden">
+                            <img
+                                class="w-full sm:w-50 h-150 sm:h-auto object-cover sm:rounded-s-2xl"
+                                src="{{asset('img/p-1.jpg')}}"
+                                alt="Blog Image">
+                            <div class="p-4 flex flex-col justify-center">
+                                <h3 class="font-semibold text-[23px] text-gray-800">
+                                    درباره زبان PHP 8.5
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 mb-3">
+                                    پی‌اچ‌پی (PHP) یک زبان برنامه‌نویسیِ شیءگرا و چند منظوره است که برای طیف گسترده‌ای از کاربردها استفاده می‌شود. پی‌اچ‌پی ابتدا برای طراحی وب و اجرا بر روی سرورها توسعه یافته‌شد؛ اما امروزه می‌توان از آن به عنوان یک زبان عمومی نیز استفاده‌کرد.
+                                </p>
+                                <div class="text-gray-600 flex items-center justify-between">
+                                    <span>لایک ۵۰۰</span>
+                                    <span>تاریخ انتشار : ۲۰۲۶/۰۱/۰۱</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       class="block border border-gray-300 rounded-2xl hover:shadow-md focus:outline-hidden transition-shadow">
+                        <div class="flex flex-col sm:flex-row items-stretch overflow-hidden">
+                            <img
+                                class="w-full sm:w-50 h-150 sm:h-auto object-cover sm:rounded-s-2xl"
+                                src="{{asset('img/p-1.jpg')}}"
+                                alt="Blog Image">
+                            <div class="p-4 flex flex-col justify-center">
+                                <h3 class="font-semibold text-[23px] text-gray-800">
+                                    درباره زبان PHP 8.5
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 mb-3">
+                                    پی‌اچ‌پی (PHP) یک زبان برنامه‌نویسیِ شیءگرا و چند منظوره است که برای طیف گسترده‌ای از کاربردها استفاده می‌شود. پی‌اچ‌پی ابتدا برای طراحی وب و اجرا بر روی سرورها توسعه یافته‌شد؛ اما امروزه می‌توان از آن به عنوان یک زبان عمومی نیز استفاده‌کرد.
+                                </p>
+                                <div class="text-gray-600 flex items-center justify-between">
+                                    <span>لایک ۵۰۰</span>
+                                    <span>تاریخ انتشار : ۲۰۲۶/۰۱/۰۱</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       class="block border border-gray-300 rounded-2xl hover:shadow-md focus:outline-hidden transition-shadow">
+                        <div class="flex flex-col sm:flex-row items-stretch overflow-hidden">
+                            <img
+                                class="w-full sm:w-50 h-150 sm:h-auto object-cover sm:rounded-s-2xl"
+                                src="{{asset('img/p-1.jpg')}}"
+                                alt="Blog Image">
+                            <div class="p-4 flex flex-col justify-center">
+                                <h3 class="font-semibold text-[23px] text-gray-800">
+                                    درباره زبان PHP 8.5
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 mb-3">
+                                    پی‌اچ‌پی (PHP) یک زبان برنامه‌نویسیِ شیءگرا و چند منظوره است که برای طیف گسترده‌ای از کاربردها استفاده می‌شود. پی‌اچ‌پی ابتدا برای طراحی وب و اجرا بر روی سرورها توسعه یافته‌شد؛ اما امروزه می‌توان از آن به عنوان یک زبان عمومی نیز استفاده‌کرد.
+                                </p>
+                                <div class="text-gray-600 flex items-center justify-between">
+                                    <span>لایک ۵۰۰</span>
+                                    <span>تاریخ انتشار : ۲۰۲۶/۰۱/۰۱</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                       class="block border border-gray-300 rounded-2xl hover:shadow-md focus:outline-hidden transition-shadow">
+                        <div class="flex flex-col sm:flex-row items-stretch overflow-hidden">
+                            <img
+                                class="w-full sm:w-50 h-150 sm:h-auto object-cover sm:rounded-s-2xl"
+                                src="{{asset('img/p-1.jpg')}}"
+                                alt="Blog Image">
+                            <div class="p-4 flex flex-col justify-center">
+                                <h3 class="font-semibold text-[23px] text-gray-800">
+                                    درباره زبان PHP 8.5
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 mb-3">
+                                    پی‌اچ‌پی (PHP) یک زبان برنامه‌نویسیِ شیءگرا و چند منظوره است که برای طیف گسترده‌ای از کاربردها استفاده می‌شود. پی‌اچ‌پی ابتدا برای طراحی وب و اجرا بر روی سرورها توسعه یافته‌شد؛ اما امروزه می‌توان از آن به عنوان یک زبان عمومی نیز استفاده‌کرد.
+                                </p>
+                                <div class="text-gray-600 flex items-center justify-between">
+                                    <span>لایک ۵۰۰</span>
+                                    <span>تاریخ انتشار : ۲۰۲۶/۰۱/۰۱</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+
+            </section>
         </div>
+        <footer class="mt-auto bg-gray-900 w-full">
+            <div class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+                <!-- Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    <div class="col-span-full lg:col-span-2">
+                        <a class="flex-none text-xl font-semibold text-white focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">درباره ما</a>
+                        <p class="mt-2 text-sm text-gray-500 mb-3">
+                            پی‌اچ‌پی (PHP) یک زبان برنامه‌نویسیِ شیءگرا و چند منظوره است که برای طیف گسترده‌ای از کاربردها استفاده می‌شود. پی‌اچ‌پی ابتدا برای طراحی وب و اجرا بر روی سرورها توسعه یافته‌شد؛ اما امروزه می‌توان از آن به عنوان یک زبان عمومی نیز استفاده‌کرد.
+                        </p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <h4 class="font-semibold text-gray-100">پیوندهای مفید</h4>
+
+                        <div class="mt-3 grid space-y-3">
+                            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">درباره ما</a></p>
+                            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">وبلاگ</a></p>
+                            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">استخدام</a></p>
+                            <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">مشتریان</a></p>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+
+                    <div class="col-span-2">
+                        <h4 class="font-semibold text-gray-100">خبرنامه</h4>
+
+                        <form>
+                            <div class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-neutral-900">
+                                <div class="w-full">
+                                    <label for="hero-input" class="sr-only">عضویت</label>
+                                    <input type="text" id="hero-input" name="hero-input" class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="ایمیل را وارد کنید.">
+                                </div>
+                                <a class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                    عضو شو
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Grid -->
+
+                <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+                    <div class="flex flex-wrap justify-between items-center gap-2">
+                        <p class="text-sm text-gray-400 dark:text-neutral-400">
+                            © 2025 اکادمی
+                        </p>
+                    </div>
+                    <!-- End Col -->
+
+                    <!-- Social Brands -->
+                    <div>
+                        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                            </svg>
+                        </a>
+                        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </a>
+                        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- End Social Brands -->
+                </div>
+            </div>
+        </footer>
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
